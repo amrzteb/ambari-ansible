@@ -7,7 +7,7 @@
 - name: Restart ambari-server
   service:
     name: ambari-server
-    state: restarted
+    state: started
   notify: "Wait for Ambari Server to start listening on port 8080"
 
 - name: Wait for Ambari Server to start listening on port 8080
