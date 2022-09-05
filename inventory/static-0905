@@ -6,11 +6,9 @@
 ##
 ######################################################
 
-[hdp-management]
-hdp-management ansible_host=172.31.54.66 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+[hdp-master]
+hdp11 ansible_host=172.31.54.61 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
 
-[hdp-masternode-01]
-hdp-masternode-01 ansible_host=172.31.54.67 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
-
-[hdp-masternode-02]
-hdp-masternode-02 ansible_host=172.31.54.68 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+[hdp-slave]
+hdp12 ansible_host=172.31.54.59 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+hdp13 ansible_host=172.31.54.60 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack

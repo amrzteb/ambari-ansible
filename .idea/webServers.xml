@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="44b106df-48c1-4453-ab8d-e00d44ffc9ca" name="1">
+        <fileTransfer rootFolder="/opt/ansible-hortonworks" accessType="SFTP" host="hdp-build" port="22" sshConfigId="c4e378e9-1384-4c7c-8882-be93c9329f91" sshConfig="root@hdp-build:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

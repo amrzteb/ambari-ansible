@@ -21,7 +21,6 @@ blueprint_dynamic:                                              # properties for
       - HISTORYSERVER
       - HIVE_SERVER
       - HIVE_METASTORE
-      - WEBHCAT_SERVER
       - OOZIE_SERVER
       - HBASE_MASTER
       - HBASE_REGIONSERVER

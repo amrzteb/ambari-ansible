@@ -39,9 +39,7 @@
       when: ansible_os_family|lower == "suse"
 
     - name: Add the mysql repository key (apt)
-      apt_key:
-        data: "{{ lookup('file', mysql_repo_keyfile) }}"
-        id: "{{ mysql_repo_key }}"
+      apt_key: url=https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 state=present
       when: ansible_os_family|lower == "debian"
 
     - name: Add the mysql repository (apt)

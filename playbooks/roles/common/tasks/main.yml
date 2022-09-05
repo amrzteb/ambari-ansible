@@ -23,6 +23,20 @@
   include_tasks: java.yml
   when: java != "embedded"
 
+- name: Config for NTP Server
+  template:
+    src: ntp_follow.conf.j2
+    dest: /etc/ntp.conf
+    mode: 0755
+  when: ansible_hostname != groups['all'][0]
+
+- name: Config for main NTP Server
+  template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+    mode: 0755
+  when: ansible_hostname == groups['all'][0]
+
 - name: Make sure the NTP service is started
   service:
     name: "{{ ntp_service_name }}"

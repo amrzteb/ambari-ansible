@@ -388,3 +388,8 @@
     - name: Set the install_hdpsearch variable to all nodes
       set_fact:
         install_hdpsearch: "{{ hostvars[groups['ambari-server']|first]['install_hdpsearch'] }}"
+- name: Set cluster NTP server
+  hosts: all
+  tasks:
+    - debug: var=hostvars[groups['all'][0]]['ansible_default_ipv4'].address
+    - set_fact: cluster_npt_server={{ hostvars[groups['all'][0]]['ansible_default_ipv4'].address }}

@@ -13,7 +13,7 @@ packages:
 
 openjdk_package: java-1.8.0-openjdk-devel
 
-ntp_service_name: chronyd
+ntp_service_name: ntpd
 
 firewall_service_name: firewalld
 
