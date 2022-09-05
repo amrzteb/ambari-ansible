@@ -5,12 +5,12 @@
 
 cluster_name: 'mytestcluster'
 
-ambari_version: '2.7.3.0'                                 # must be the 4-part full version number
+ambari_version: '2.7.5.0'                                 # must be the 4-part full version number
 
-ambari_sub_version: '139'
+ambari_sub_version: '72'
 
-hdp_version: '3.1.0.0'                                    # must be the 4-part full version number
-hdp_build_number: '78'                                  # the HDP build number from docs.hortonworks.com (if set to 'auto', Ansible will try to get it from the repository)
+hdp_version: '3.1.5.0'                                    # must be the 4-part full version number
+hdp_build_number: '152'                                  # the HDP build number from docs.hortonworks.com (if set to 'auto', Ansible will try to get it from the repository)
 
 hdf_version: '3.4.1.1'                                    # must be the 4-part full version number
 hdf_build_number: 'auto'                                  # the HDF build number from docs.hortonworks.com (if set to 'auto', Ansible will try to get it from the repository)
@@ -18,7 +18,7 @@ hdf_build_number: 'auto'                                  # the HDF build number
 hdpsearch_version: '4.0.0'                                # must be the full version number
 hdpsearch_build_number: '400'                             # the HDP Search build number from docs.hortonworks.com
 
-repo_base_url: 'http://8.210.103.123'     # change this if using a Local Repository
+repo_base_url: 'http://172.31.54.40'     # change this if using a Local Repository
 
 
 ###########################
@@ -178,7 +178,7 @@ base_tmp_dir: '/tmp'
 blueprint_name: '{{ cluster_name }}_blueprint'                  # the name of the blueprint as it will be stored in Ambari
 blueprint_file: 'blueprint_dynamic.j2'                          # the blueprint JSON file - 'blueprint_dynamic.j2' is a Jinja2 template that generates the required JSON
 blueprint_dynamic:                                              # properties for the dynamic blueprint - these are only used by the 'blueprint_dynamic.j2' template to generate the JSON
-  - host_group: "s105-bigdata-cluster-0002"
+  - host_group: "hdp-masternode-01"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT', 'PIG', 'SQOOP', 'HIVE_CLIENT', 'OOZIE_CLIENT', 'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT', 'HBASE_CLIENT']
     services:
       - ZOOKEEPER_SERVER
@@ -193,7 +193,7 @@ blueprint_dynamic:                                              # properties for
       - HST_AGENT
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
-  - host_group: "s105-bigdata-cluster-0003"
+  - host_group: "hdp-masternode-02"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT', 'PIG', 'SQOOP', 'HIVE_CLIENT', 'OOZIE_CLIENT', 'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT', 'HBASE_CLIENT']
     services:
       - ZOOKEEPER_SERVER
@@ -208,7 +208,7 @@ blueprint_dynamic:                                              # properties for
       - HST_AGENT
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
-  - host_group: "s105-bigdata-cluster-0001"
+  - host_group: "hdp-management"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT', 'PIG', 'SQOOP', 'HIVE_CLIENT', 'OOZIE_CLIENT', 'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT', 'HBASE_CLIENT']
     services:
       - ZOOKEEPER_SERVER

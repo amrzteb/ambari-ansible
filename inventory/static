@@ -6,11 +6,11 @@
 ##
 ######################################################
 
-[hdp-management]
-hdp-management ansible_host=172.31.54.66 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+[s105-bigdata-cluster-0001]
+s105-bigdata-cluster-0001 ansible_host=192.168.103.89 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
 
-[hdp-masternode-01]
-hdp-masternode-01 ansible_host=172.31.54.67 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+[s105-bigdata-cluster-0002]
+s105-bigdata-cluster-0002 ansible_host=192.168.103.196 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
 
-[hdp-masternode-02]
-hdp-masternode-02 ansible_host=172.31.54.68 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+[s105-bigdata-cluster-0003]
+s105-bigdata-cluster-0003 ansible_host=192.168.103.100 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
