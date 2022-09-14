@@ -231,6 +231,7 @@ blueprint_dynamic:                                              # properties for
       - HBASE_REGIONSERVER
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
+      - HST_SERVER
 
 
 
