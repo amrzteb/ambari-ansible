@@ -142,6 +142,7 @@ accumulo_security_options:
   trace_user: "trace"                                     # user that the tracer process uses to write tracing data to Accumulo
   trace_password: "{{ default_password }}"                # password for the trace user
 
+registry_dns_bind_port: 54
 
 ##########################
 ## ambari configuration ##
