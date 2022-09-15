@@ -189,7 +189,6 @@ blueprint_dynamic:                                              # properties for
       - HBASE_MASTER
       - HIVE_SERVER
       - HIVE_METASTORE
-      - ACTIVITY_ANALYZER
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
   - host_group: "s105-bigdata-cluster-0003"
@@ -203,7 +202,6 @@ blueprint_dynamic:                                              # properties for
       - HBASE_MASTER
       - HIVE_SERVER
       - HIVE_METASTORE
-      - ACTIVITY_ANALYZER
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
   - host_group: "s105-bigdata-cluster-0001"
@@ -217,8 +215,6 @@ blueprint_dynamic:                                              # properties for
       - APP_TIMELINE_SERVER
       - HISTORYSERVER
       - KNOX_GATEWAY
-      - ACTIVITY_ANALYZER
-      - ACTIVITY_EXPLORER
       - METRICS_COLLECTOR
       - METRICS_GRAFANA
       - METRICS_MONITOR
