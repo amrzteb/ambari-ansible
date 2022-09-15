@@ -214,7 +214,6 @@ blueprint_dynamic:                                              # properties for
       - AMBARI_SERVER
       - INFRA_SOLR
       - LOGSEARCH_SERVER
-      - ZEPPELIN_MASTER
       - APP_TIMELINE_SERVER
       - HISTORYSERVER
       - KNOX_GATEWAY
