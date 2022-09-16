@@ -224,9 +224,6 @@ blueprint_dynamic:                                              # properties for
       - TIMELINE_READER
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
-  - host_group: "worker"
-    clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'TEZ_CLIENT', 'HIVE_CLIENT', 'INFRA_SOLR_CLIENT', 'HBASE_CLIENT']
-    services:
       - HBASE_REGIONSERVER
       - NODEMANAGER
       - DATANODE
