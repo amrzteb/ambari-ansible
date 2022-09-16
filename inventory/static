@@ -6,10 +6,11 @@
 ##
 ######################################################
 
-[master]
+[master-node-01]
 s105-bigdata-cluster-0001 ansible_host=172.31.54.95 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
+
+[master-node-02]
 s105-bigdata-cluster-0002 ansible_host=172.31.54.94 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
-s105-bigdata-cluster-0003 ansible_host=172.31.54.93 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
 
 [worker]
 s105-bigdata-cluster-0002 ansible_host=172.31.54.94 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/default-rack
