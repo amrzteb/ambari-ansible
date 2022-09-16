@@ -193,11 +193,11 @@ blueprint_dynamic:                                              # properties for
       - METRICS_MONITOR
       - LOGSEARCH_LOGFEEDER
   - host_group: "worker"
-      clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'TEZ_CLIENT', 'HIVE_CLIENT', 'INFRA_SOLR_CLIENT', 'HBASE_CLIENT']
-      services:
-        - HBASE_REGIONSERVER
-        - NODEMANAGER
-        - DATANODE
+    clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'TEZ_CLIENT', 'HIVE_CLIENT', 'INFRA_SOLR_CLIENT', 'HBASE_CLIENT']
+    services:
+      - HBASE_REGIONSERVER
+      - NODEMANAGER
+      - DATANODE
 
   - host_group: "management"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'TEZ_CLIENT', 'HIVE_CLIENT', 'INFRA_SOLR_CLIENT', 'HBASE_CLIENT']
